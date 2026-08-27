@@ -233,21 +233,32 @@ footer a {
 }
 footer a:hover {color: var(--destaque-inverso);}
 
-@media screen and ( max-width:900px) {
-  #skill-container {
-    grid-template-columns: 1fr 1fr;
+
+
+
+
+@media screen and (min-width: 800px) {
+  main {
+    grid-template-columns: auto 500px 1fr auto ;
   }
+
+section#ficha {
+  grid-column: 2 / 3;
+  height: fit-content;
+  position: sticky;
+  top: 65px;
+}
+section#detalhes {grid-column: 3/4;}
+
+#skill-container{ grid-template-columns: 1fr 1fr;}
+
+#projeto-container .projeto {
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 
-@media screen and (max-width: 900px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-
-    section#ficha,
-    section#detalhes {
-        grid-column: 1;
-    }
 }
+
+
 
